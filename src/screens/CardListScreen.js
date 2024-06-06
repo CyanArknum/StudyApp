@@ -6,7 +6,6 @@ const CardListScreen = ({ navigation }) => {
 
     const { cards, deleteCard } = useContext(StudyCardsContext)
 
-    //Filtrar os cards por status
     const inProgressCards = cards.filter(card => card.status === 'in_progress')
     const concludedCards = cards.filter(card => card.status === 'done')
     const backlogCards = cards.filter(card => card.status === 'backlog')

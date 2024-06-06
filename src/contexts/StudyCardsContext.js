@@ -11,8 +11,6 @@ export const StudyCardsProvider = ({ children }) => {
     }, [])
 
     const loadCards = async () => {
-        //await AsyncStorage.clear();
-        //console.log('AsyncStorage was cleared successfully!');
         const storedCards = await AsyncStorage.getItem('cards')
         if (storedCards) setCards(JSON.parse(storedCards))
     }
